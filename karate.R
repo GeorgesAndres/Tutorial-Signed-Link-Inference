@@ -22,9 +22,12 @@ source("adj2el_2.R") # Converts adjacency matrices to edge lists
 
 
 # Load data from ergmcount
-# The 'zach' dataset from the 'ergm.count' package is used as an example network for analysis.
+# The 'zach' dataset from the 'ergm.count' package is used.
 # This dataset is loaded and then converted into a tbl_graph object, which is a tidygraph format 
 # suitable for network analysis in the tidyverse paradigm.
+if (!require(ergm.count, quietly = TRUE)) {
+  install.packages("ergm.count") # Install 'remotes' if not already installed
+}
 data('zach', package = "ergm.count")
 
 ##################
