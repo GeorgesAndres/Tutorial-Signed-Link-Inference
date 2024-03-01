@@ -16,8 +16,8 @@ if (!require(adjHelpR, quietly = TRUE)) {
 library(adjHelpR) # Load 'adjHelpR'
 
 # Source custom R scripts containing auxiliary functions not available in standard R packages.
-source("phi_element_undirected.R") # Contains functions for calculating phi coefficients
-source("adj2el_2.R") # Converts adjacency matrices to edge lists
+source("functions/phi_element_undirected.R") # Contains functions for calculating phi coefficients
+source("functions/adj2el_2.R") # Converts adjacency matrices to edge lists
 
 
 
@@ -170,7 +170,7 @@ regression_table_2 %>%
 # multi-class prediction
 ################################################################################
 # Source auxiliary functions for evaluation and cross-validation
-source('karate_auxiliary_functions.R')
+source('functions/karate_auxiliary_functions.R')
 
 # Fit an ordinal logistic regression model (using polr from the MASS package) to predict the ordered closeness
 # between nodes based on network structure attributes such as higher_than and lower_than metrics.

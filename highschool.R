@@ -16,8 +16,8 @@ if (!require(adjHelpR, quietly = TRUE)) {
 }
 library(adjHelpR)
 
-source("adj2el_2.R")
-source("phi_element_undirected.R")
+source("functions/adj2el_2.R")
+source("functions/phi_element_undirected.R")
 
 ###### GET DATA
 
@@ -219,7 +219,7 @@ dat %>%
 ###############################################################################
 
 # Source auxiliary functions for evaluation and cross-validation
-source('highschool_auxiliary_functions.R')
+source('functions/highschool_auxiliary_functions.R')
 
 # Fit logistic regression models with different predictors
 # Model using Chung-Lu derived predictors
